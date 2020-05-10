@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{%  block body %}
+    <form method="get">
+
+        <input id="q" name="q" type="text" placeholder="szukaj">
+
+    </form>
+
+
+    {% for word in words %}
+        <tr>
+            <td>{{ word.word }}  {{ word.translation }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
