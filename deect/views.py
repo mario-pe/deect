@@ -6,6 +6,7 @@ from .models import Word
 
 
 def words(request):
+
     words = Word.objects.all()
     return render(request, "words.html", {"words": words})
 
